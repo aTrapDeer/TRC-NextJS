@@ -1,101 +1,167 @@
-import Image from "next/image";
+import Image from 'next/image'
+import { Button } from "@/components/ui/button"
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
+import { Shield, Zap, Users, Building2 } from 'lucide-react'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="bg-white">
+      {/* Hero Section */}
+      <div className="relative bg-gray-50">
+        <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+              <span className="block">Sharpening Enterprise</span>
+              <span className="block text-indigo-600">Technology and Management</span>
+            </h1>
+            <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+              The Rapier Company provides cutting-edge consulting services for banks, tech companies, and enterprise industries, ensuring your organization stays ahead in the rapidly evolving business landscape.
+            </p>
+            <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+              <div className="rounded-md shadow">
+                <Button size="lg">Schedule a Consultation</Button>
+              </div>
+              <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+                <Button variant="outline" size="lg">Learn More</Button>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+
+      {/* Services Section */}
+      <div className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+              Our Services
+            </h2>
+            <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+              Comprehensive solutions for modern enterprise challenges.
+            </p>
+          </div>
+
+          <div className="mt-10">
+            <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+              <Card>
+                <CardHeader>
+                  <Zap className="h-8 w-8 text-indigo-600 mb-2" />
+                  <CardTitle>Technology Systems</CardTitle>
+                  <CardDescription>Modernize your technology infrastructure for enhanced efficiency and innovation.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Digital Transformation</li>
+                    <li>Cloud Migration</li>
+                    <li>AI and ML Integration</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <Shield className="h-8 w-8 text-indigo-600 mb-2" />
+                  <CardTitle>Security</CardTitle>
+                  <CardDescription>Protect your assets and data with our advanced security solutions.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Cybersecurity Audits</li>
+                    <li>Threat Detection and Response</li>
+                    <li>Compliance Management</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <Building2 className="h-8 w-8 text-indigo-600 mb-2" />
+                  <CardTitle>Management Consulting</CardTitle>
+                  <CardDescription>Optimize your organizational structure and processes for peak performance.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Strategic Planning</li>
+                    <li>Process Optimization</li>
+                    <li>Change Management</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <Users className="h-8 w-8 text-indigo-600 mb-2" />
+                  <CardTitle>Hiring Solutions</CardTitle>
+                  <CardDescription>Find and retain top talent to drive your organization forward.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Talent Acquisition Strategies</li>
+                    <li>Skills Assessment</li>
+                    <li>Retention Programs</li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Industries Section */}
+      <div className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+              Industries We Serve
+            </h2>
+            <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+              Tailored solutions for leading sectors in the modern economy.
+            </p>
+          </div>
+
+          <div className="mt-10">
+            <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Banking</CardTitle>
+                  <CardDescription>Navigating digital transformation and regulatory challenges in the financial sector.</CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle>Technology</CardTitle>
+                  <CardDescription>Accelerating innovation and growth in fast-paced tech environments.</CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle>Enterprise</CardTitle>
+                  <CardDescription>Optimizing operations and strategy for large-scale organizations across industries.</CardDescription>
+                </CardHeader>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-indigo-700">
+        <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+            <span className="block">Ready to sharpen your enterprise?</span>
+            <span className="block">Start your consultation today.</span>
+          </h2>
+          <p className="mt-4 text-lg leading-6 text-indigo-200">
+            Our experts are ready to help you navigate the complex world of enterprise technology and management.
+          </p>
+          <Button size="lg" variant="secondary" className="mt-8">
+            Schedule a Consultation
+          </Button>
+        </div>
+      </div>
     </div>
-  );
+  )
 }
+
