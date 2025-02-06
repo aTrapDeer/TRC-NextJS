@@ -18,10 +18,14 @@ export default function Home() {
               The Rapier Company provides cutting-edge consulting services for banks, tech companies, and enterprise industries, ensuring your organization stays ahead in the rapidly evolving business landscape.
             </p>
             <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
-              <div className="rounded-md shadow">
-                <Button size="lg">Schedule a Consultation</Button>
+              <div className="rounded-md">
+                <Button size="lg" asChild>
+                  <a href="https://outlook.office365.com/book/TheRapierCompanyScheduleaMeeting@TheRapierCompanyLLC.onmicrosoft.com/" target="_blank" rel="noopener noreferrer">
+                    Schedule a Consultation
+                  </a>
+                </Button>
               </div>
-              <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+              <div className="mt-3 rounded-md sm:mt-0 sm:ml-3">
                 <Button variant="outline" size="lg">Learn More</Button>
               </div>
             </div>
@@ -156,8 +160,10 @@ export default function Home() {
           <p className="mt-4 text-lg leading-6 text-indigo-200">
             Our experts are ready to help you navigate the complex world of enterprise technology and management.
           </p>
-          <Button size="lg" variant="secondary" className="mt-8">
-            Schedule a Consultation
+          <Button size="lg" variant="secondary" className="mt-8" asChild>
+            <a href="https://outlook.office365.com/book/TheRapierCompanyScheduleaMeeting@TheRapierCompanyLLC.onmicrosoft.com/" target="_blank" rel="noopener noreferrer">
+              Schedule a Consultation
+            </a>
           </Button>
         </div>
       </div>

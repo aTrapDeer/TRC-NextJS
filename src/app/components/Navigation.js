@@ -30,7 +30,11 @@ export default function Navigation() {
             <Link href="/contact" className="text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium">
               Contact
             </Link>
-            <Button variant="default">Schedule a Consultation</Button>
+            <Button variant="default" asChild>
+              <a href="https://outlook.office365.com/book/TheRapierCompanyScheduleaMeeting@TheRapierCompanyLLC.onmicrosoft.com/" target="_blank" rel="noopener noreferrer">
+                Schedule a Consultation
+              </a>
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -87,8 +91,10 @@ export default function Navigation() {
             Contact
           </Link>
           <div className="px-3 py-2">
-            <Button variant="default" className="w-full" onClick={() => setIsOpen(false)}>
-              Schedule a Consultation
+            <Button variant="default" className="w-full" asChild onClick={() => setIsOpen(false)}>
+              <a href="https://outlook.office365.com/book/TheRapierCompanyScheduleaMeeting@TheRapierCompanyLLC.onmicrosoft.com/" target="_blank" rel="noopener noreferrer">
+                Schedule a Consultation
+              </a>
             </Button>
           </div>
         </div>
