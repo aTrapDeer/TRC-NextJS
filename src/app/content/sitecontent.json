@@ -1,0 +1,212 @@
+{
+  "navigation": {
+    "logo": "TRC",
+    "menuItems": [
+      {
+        "label": "Services",
+        "path": "/services"
+      },
+      {
+        "label": "Industries",
+        "path": "/industries"
+      },
+      {
+        "label": "About",
+        "path": "/about"
+      },
+      {
+        "label": "Contact",
+        "path": "/contact"
+      }
+    ],
+    "consultationButton": {
+      "label": "Schedule a Consultation",
+      "url": "https://outlook.office365.com/book/TheRapierCompanyScheduleaMeeting@TheRapierCompanyLLC.onmicrosoft.com/"
+    }
+  },
+  "homepage": {
+    "hero": {
+      "title": {
+        "line1": "Sharpening Enterprise",
+        "line2": "Technology and Management"
+      },
+      "description": "The Rapier Company provides cutting-edge consulting services for banks, tech companies, and enterprise industries, ensuring your organization stays ahead in the rapidly evolving business landscape.",
+      "buttons": {
+        "primary": {
+          "label": "Schedule a Consultation",
+          "url": "https://outlook.office365.com/book/TheRapierCompanyScheduleaMeeting@TheRapierCompanyLLC.onmicrosoft.com/"
+        },
+        "secondary": {
+          "label": "Learn More",
+          "url": "#"
+        }
+      }
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Comprehensive solutions for modern enterprise challenges",
+      "items": [
+        {
+          "title": "Technology Systems",
+          "description": "Modernize your technology infrastructure for enhanced efficiency and innovation.",
+          "items": [
+            "Digital Transformation",
+            "Cloud Migration",
+            "AI and ML Integration"
+          ]
+        },
+        {
+          "title": "Security",
+          "description": "Protect your assets and data with our advanced security solutions.",
+          "items": [
+            "Cybersecurity Audits",
+            "Threat Detection and Response",
+            "Compliance Management"
+          ]
+        },
+        {
+          "title": "Management Consulting",
+          "description": "Optimize your organizational structure and processes for peak performance.",
+          "items": [
+            "Strategic Planning",
+            "Process Optimization",
+            "Change Management"
+          ]
+        },
+        {
+          "title": "Hiring Solutions",
+          "description": "Find and retain top talent to drive your organization forward.",
+          "items": [
+            "Talent Acquisition Strategies",
+            "Skills Assessment",
+            "Retention Programs"
+          ]
+        }
+      ]
+    },
+    "industries": {
+      "title": "Industries We Serve",
+      "subtitle": "Tailored solutions for leading sectors in the modern economy",
+      "items": [
+        {
+          "title": "Banking",
+          "description": "Navigating digital transformation and regulatory challenges in the financial sector."
+        },
+        {
+          "title": "Technology",
+          "description": "Accelerating innovation and growth in fast-paced tech environments."
+        },
+        {
+          "title": "Enterprise",
+          "description": "Optimizing operations and strategy for large-scale organizations across industries."
+        }
+      ]
+    },
+    "cta": {
+      "title": {
+        "line1": "Ready to sharpen your enterprise?",
+        "line2": "Start your consultation today."
+      },
+      "description": "Our experts are ready to help you navigate the complex world of enterprise technology and management.",
+      "button": {
+        "label": "Schedule a Consultation",
+        "url": "https://outlook.office365.com/book/TheRapierCompanyScheduleaMeeting@TheRapierCompanyLLC.onmicrosoft.com/"
+      }
+    }
+  },
+  "industriesPage": {
+    "hero": {
+      "title": "Industries We Serve",
+      "description": "Specialized expertise across key sectors of the modern economy"
+    },
+    "industries": [
+      {
+        "icon": "Landmark",
+        "title": "Banking & Financial Services",
+        "description": "Navigating digital transformation and regulatory challenges in the financial sector.",
+        "features": [
+          {
+            "icon": "ShieldCheck",
+            "text": "Security system implementation"
+          },
+          {
+            "icon": "Network",
+            "text": "Core banking systems modernization"
+          },
+          {
+            "icon": "CircuitBoard",
+            "text": "Digital banking transformation"
+          }
+        ]
+      },
+      {
+        "icon": "CircuitBoard",
+        "title": "Technology Companies",
+        "description": "Accelerating innovation and growth in fast-paced tech environments.",
+        "features": [
+          {
+            "icon": "Network",
+            "text": "Cloud infrastructure optimization"
+          },
+          {
+            "icon": "ShieldCheck",
+            "text": "Cybersecurity enhancement"
+          },
+          {
+            "icon": "Building2",
+            "text": "Scalable architecture design"
+          }
+        ]
+      },
+      {
+        "icon": "Building2",
+        "title": "Enterprise Organizations",
+        "description": "Optimizing operations and strategy for large-scale organizations.",
+        "features": [
+          {
+            "icon": "Factory",
+            "text": "Process automation"
+          },
+          {
+            "icon": "Network",
+            "text": "Digital workplace solutions"
+          },
+          {
+            "icon": "ShieldCheck",
+            "text": "Enterprise security"
+          }
+        ]
+      }
+    ],
+    "expertise": {
+      "title": "Our Industry Expertise",
+      "understanding": {
+        "title": "Comprehensive Understanding",
+        "description": "With decades of experience across multiple industries, we bring deep domain knowledge and best practices to every engagement. Our team's expertise spans the complete spectrum of enterprise technology and management consulting.",
+        "highlight": {
+          "title": "Industry-Specific Solutions",
+          "description": "We understand that each industry faces unique challenges. Our solutions are tailored to address specific industry requirements while leveraging cross-sector innovations."
+        }
+      },
+      "differentiators": {
+        "title": "Key Differentiators",
+        "items": [
+          "40+ years of combined industry experience",
+          "Specialized expertise in banking and technology",
+          "Proven track record of successful implementations"
+        ]
+      }
+    },
+    "cta": {
+      "title": {
+        "line1": "Ready to transform your organization?",
+        "line2": "Let's discuss your industry needs."
+      },
+      "description": "Our industry experts are ready to help you navigate the complexities of your sector.",
+      "button": {
+        "label": "Schedule a Consultation",
+        "url": "/contact"
+      }
+    }
+  }
+}

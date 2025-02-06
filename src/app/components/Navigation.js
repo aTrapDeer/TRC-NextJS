@@ -4,35 +4,34 @@ import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import content from '@/app/content/sitecontent.json'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const { navigation } = content
 
   return (
     <nav className="bg-white shadow-md relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="text-2xl font-bold text-indigo-700">TRC</Link>
+            <Link href="/" className="text-2xl font-bold text-indigo-700">{navigation.logo}</Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden sm:flex sm:items-center sm:space-x-8">
-            <Link href="/services" className="text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium">
-              Services
-            </Link>
-            <Link href="/industries" className="text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium">
-              Industries
-            </Link>
-            <Link href="/about" className="text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium">
-              About
-            </Link>
-            <Link href="/contact" className="text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium">
-              Contact
-            </Link>
+            {navigation.menuItems.map((item) => (
+              <Link
+                key={item.path}
+                href={item.path}
+                className="text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium"
+              >
+                {item.label}
+              </Link>
+            ))}
             <Button variant="default" asChild>
-              <a href="https://outlook.office365.com/book/TheRapierCompanyScheduleaMeeting@TheRapierCompanyLLC.onmicrosoft.com/" target="_blank" rel="noopener noreferrer">
-                Schedule a Consultation
+              <a href={navigation.consultationButton.url} target="_blank" rel="noopener noreferrer">
+                {navigation.consultationButton.label}
               </a>
             </Button>
           </div>
@@ -62,38 +61,20 @@ export default function Navigation() {
         } sm:hidden absolute top-16 left-0 right-0 bg-white shadow-lg transition-all duration-300 ease-in-out z-50`}
       >
         <div className="px-2 pt-2 pb-3 space-y-1">
-          <Link
-            href="/services"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-            onClick={() => setIsOpen(false)}
-          >
-            Services
-          </Link>
-          <Link
-            href="/industries"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-            onClick={() => setIsOpen(false)}
-          >
-            Industries
-          </Link>
-          <Link
-            href="/about"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-            onClick={() => setIsOpen(false)}
-          >
-            About
-          </Link>
-          <Link
-            href="/contact"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-            onClick={() => setIsOpen(false)}
-          >
-            Contact
-          </Link>
+          {navigation.menuItems.map((item) => (
+            <Link
+              key={item.path}
+              href={item.path}
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+              onClick={() => setIsOpen(false)}
+            >
+              {item.label}
+            </Link>
+          ))}
           <div className="px-3 py-2">
             <Button variant="default" className="w-full" asChild onClick={() => setIsOpen(false)}>
-              <a href="https://outlook.office365.com/book/TheRapierCompanyScheduleaMeeting@TheRapierCompanyLLC.onmicrosoft.com/" target="_blank" rel="noopener noreferrer">
-                Schedule a Consultation
+              <a href={navigation.consultationButton.url} target="_blank" rel="noopener noreferrer">
+                {navigation.consultationButton.label}
               </a>
             </Button>
           </div>
